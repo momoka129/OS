@@ -530,6 +530,14 @@ exit命令退回到普通用户
 
 
 
+## 主机名映射（域名解析）
+
+配置 C:\Windows\system32\drivers\etc\host 文件 ——— 通过域名连接linux
+
+系统会先查找本地的记录，找不到再联网去公开的DNS服务器查找。
+
+
+
 ## 配置VMware固定IP
 
 1. 修改VMware网络，参阅PPT，图太多
@@ -674,6 +682,20 @@ exit命令退回到普通用户
 记录了执行程序的搜索路径
 
 可以将自定义路径加入PATH内，实现自定义命令在任意地方均可执行的效果
+
+## 自定义环境变量
+
+`````
+su -
+mkdir myenv
+vim sayai	i	echo i love you lizi	esc	:wq
+chmod 755 sayai
+vim /etc/profile	export PATH=$PATH:/root/myenv
+source /etc/profile
+echo $PATH
+chmod 755 /root/myenv  仍然不行：其他用户无法访问/root文件夹
+sudo mv /root/myenv/sayai /usr/local/bin/
+`````
 
 
 
