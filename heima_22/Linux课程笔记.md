@@ -1,4 +1,4 @@
-# Linux基础命令
+#  Linux基础命令
 
 
 
@@ -17,7 +17,7 @@
 
 ## 快捷键
 
-`````
+`````shell
 ctrl c    取消，停止
 
 ctrl d   退出登录，退出特定程序页面
@@ -691,7 +691,7 @@ mkdir myenv
 vim sayai	i	echo i love you lizi	esc	:wq
 chmod 755 sayai
 vim /etc/profile	export PATH=$PATH:/root/myenv
-source /etc/profile
+source /etc/profile 
 echo $PATH
 chmod 755 /root/myenv  仍然不行：其他用户无法访问/root文件夹
 sudo mv /root/myenv/sayai /usr/local/bin/
@@ -715,6 +715,16 @@ sudo mv /root/myenv/sayai /usr/local/bin/
 
 
 
+### 上传下载
+
+`````
+finallshell 拖拽
+
+yum install lrzsz
+rz
+sz
+`````
+
 
 
 ## 压缩解压
@@ -724,6 +734,19 @@ sudo mv /root/myenv/sayai /usr/local/bin/
 `tar -zcvf 压缩包 被压缩1...被压缩2...被压缩N`
 
 - -z表示使用gzip，可以不写
+
+`````
+//zip 
+ar -cvf test.tar 1.txt 2.txt
+tar -zcvf test.tar.gz 1.txt 2.txt 3.txt
+zip [-r] test.zip a.txt b.txt
+
+//unzip
+tar -xvf test.tar
+tar -xvf test.tar -C /home/kinoko
+tar -zxvf test.tar.gz -C /home/kinoko
+unzip 1.zip [-d] test/
+`````
 
 
 
@@ -739,10 +762,6 @@ sudo mv /root/myenv/sayai /usr/local/bin/
 
 - -z表示使用gzip，可以省略
 - -C，可以省略，指定要解压去的地方，不写解压到当前目录
-
-
-
-
 
 
 

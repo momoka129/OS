@@ -210,6 +210,7 @@ MySQL的安装我们可以通过前面学习的yum命令进行。
    ```sql
    # 在MySQL控制台内执行
    ALTER USER 'root'@'localhost' IDENTIFIED BY '密码';	-- 密码需要符合：大于8位，有大写字母，有特殊符号，不能是连续的简单语句如123，abc
+   kinoko&Lizi9
    ```
 
 4. [扩展]，配置root的简单密码
@@ -238,6 +239,7 @@ MySQL的安装我们可以通过前面学习的yum命令进行。
    grant all privileges on *.* to root@"IP地址" identified by '密码' with grant option;  
    # IP地址即允许登陆的IP地址，也可以填写%，表示允许任何地址
    # 密码表示给远程登录独立设置密码，和本地登陆的密码可以不同
+   123321
    
    # 刷新权限，生效
    flush privileges;
